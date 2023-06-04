@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: rgba(52, 52, 52, 1);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.JoinBoardCtrl">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.6666666666667" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.6666666666667" minWidth="10.0" prefWidth="470.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.6666666666667" minWidth="10.0" prefWidth="150.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="75.0" minHeight="75.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label stylesheets="@stylesheet.css" text="Board ID:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="lulo" />
+                <String fx:value="whiteFont" />
+            </styleClass>
+        </Label>
+        <TextField fx:id="boardId" layoutX="103.0" layoutY="260.0" maxWidth="462.0" prefHeight="25.0" prefWidth="462.0" promptText="Board ID" styleClass="lulo" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="15.0" />
+            </GridPane.margin>
+        </TextField>
+        <Label alignment="CENTER" prefHeight="39.0" prefWidth="456.0" stylesheets="@stylesheet.css" text="Join board" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <styleClass>
+                <String fx:value="lulo" />
+                <String fx:value="whiteFont" />
+            </styleClass>
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="boardPassword" maxWidth="462.0" prefHeight="25.0" prefWidth="462.0" promptText="Password" styleClass="lulo" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="15.0" />
+            </GridPane.margin>
+        </PasswordField>
+        <Label layoutX="103.0" layoutY="165.0" stylesheets="@stylesheet.css" text="Password:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+            <styleClass>
+                <String fx:value="lulo" />
+                <String fx:value="whiteFont" />
+            </styleClass>
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="invalidPasswordMessage" prefHeight="17.0" prefWidth="273.0" text="Wrong board ID or password. Please try again." textFill="RED" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="441.0" spacing="100.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <children>
+                <Button fx:id="joinButton" alignment="CENTER" defaultButton="true" maxWidth="275.0" minWidth="125.0" mnemonicParsing="false" onAction="#join" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: ffa800;" styleClass="lulo" stylesheets="@stylesheet.css" text="JOIN" textFill="WHITE" />
+                <Button fx:id="exitButton" alignment="CENTER" cancelButton="true" layoutX="230.0" layoutY="23.0" maxWidth="275.0" minWidth="125.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="161.0" style="-fx-background-color: ffa800;" styleClass="lulo" stylesheets="@stylesheet.css" text="EXIT" textFill="WHITE" />
+            </children>
+        </HBox>
+    </children>
+</GridPane>

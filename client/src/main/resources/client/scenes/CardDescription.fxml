@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane id="cardDescriptionGrid" fx:id="mainGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="700.0" style="-fx-background-color: rgba(52,52, 52, 1);" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CardDescriptionCtrl">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="569.6000198364259" minWidth="0.0" prefWidth="0.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="569.6000198364259" minWidth="0.0" prefWidth="269.6" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="0.0" prefWidth="30.199987792968727" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="556.0" minWidth="0.0" prefWidth="215.5999694824219" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="556.0" minWidth="10.0" prefWidth="190.00003051757812" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="400.0" minWidth="0.0" prefWidth="0.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="42.60001220703125" minHeight="0.0" prefHeight="39.199981689453125" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="56.800018310546875" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="33.599999999999994" vgrow="NEVER" />
+        <RowConstraints maxHeight="96.0" minHeight="7.999986267089838" prefHeight="39.19999999999999" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="111.99999389648438" minHeight="10.0" prefHeight="64.0" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="109.0" vgrow="ALWAYS" />
+        <RowConstraints maxHeight="152.00001220703126" minHeight="10.0" prefHeight="55.19999999999999" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="179.19997558593752" minHeight="0.0" prefHeight="82.39999999999998" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="45.600012207031256" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="addTaskButton" minWidth="120.0" mnemonicParsing="false" onAction="#addTask" styleClass="defaultButton" text="Add Task" textFill="WHITE" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+            <font>
+                <Font name="Segoe UI Black" size="12.0" />
+            </font>
+            <GridPane.margin>
+                <Insets right="25.0" />
+            </GridPane.margin>
+        </Button>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="250.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="7">
+            <children>
+                <Button id="deleteButton" fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteCard" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: red;" text="DELETE CARD" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="doneButton" mnemonicParsing="false" onAction="#done" prefHeight="45.0" prefWidth="120.0" styleClass="defaultButton" text="Done" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Label styleClass="lulo" text="TITLE" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets left="25.0" />
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="title" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" promptText="TITLE" style="-fx-border-color: black; -fx-border-width: 4px;" styleClass="boxes" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </TextField>
+        <Label styleClass="lulo" text="DESCRIPTION" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets left="25.0" />
+            </GridPane.margin>
+        </Label>
+        <Label styleClass="lulo" text="SUB-TASKS" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Label>
+        <ScrollPane fx:id="tasks" fitToWidth="true" maxHeight="-Infinity" maxWidth="400.0" prefHeight="151.0" prefWidth="387.0" style="-fx-border-color: black; -fx-border-width: 4px; -fx-background-color: white;" GridPane.columnIndex="3" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets right="20.0" />
+            </GridPane.margin>
+            <content>
+                <VBox fx:id="taskBody" alignment="CENTER" />
+            </content>
+        </ScrollPane>
+        <Label fx:id="invalidTITLEMessage" styleClass="lulo" text="INVALID TITLE" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets left="25.0" />
+            </GridPane.margin>
+        </Label>
+        <Label fx:id="invalidDescriptionMessage" prefHeight="21.0" styleClass="lulo" text="INVALID DESCRIPTION" textFill="RED" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets left="25.0" />
+            </GridPane.margin>
+        </Label>
+        <TextArea fx:id="description" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="250.0" promptText="Description" style="-fx-border-color: black; -fx-border-width: 4;" styleClass="boxes" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="2" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </TextArea>
+        <Label fx:id="invalidSUBTASKMessage" prefHeight="40.0" styleClass="lulo" text="INVALID SUB_TASK TITLE" textFill="RED" wrapText="true" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+        <Label alignment="CENTER" styleClass="lulo" stylesheets="@stylesheet.css" text="EDIT CARD" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <font>
+                <Font size="36.0" />
+            </font>
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </Label>
+        <ScrollPane fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="70.0" prefWidth="387.0" style="-fx-border-color: black; -fx-border-width: 4px; -fx-background-color: white;" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="TOP">
+            <content>
+                <VBox fx:id="tagList" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="390.0" />
+            </content>
+            <GridPane.margin>
+                <Insets right="20.0" />
+            </GridPane.margin>
+        </ScrollPane>
+        <Label styleClass="lulo" text="TAGS" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Label>
+        <Label fx:id="tooManyTagsMessage" prefHeight="40.0" styleClass="lulo" text="TOO MANY TAGS" textFill="RED" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets right="20.0" top="45.0" />
+            </GridPane.margin>
+        </Label>
+      <Label styleClass="lulo" text="PRESET" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="RIGHT">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </Label>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</GridPane>

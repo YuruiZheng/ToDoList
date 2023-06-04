@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<GridPane alignment="CENTER" gridLinesVisible="false" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: rgba(52,52,52,1);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.StartCtrl">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.6666666666667" minWidth="10.0" prefWidth="51.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.6666666666667" minWidth="10.0" prefWidth="502.99999999999994" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="599.6666666666667" minWidth="10.0" prefWidth="49.33333333333337" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="100.0" minHeight="75.0" prefHeight="100.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="70.0" minHeight="32.0" prefHeight="70.0" />
+      <RowConstraints />
+    </rowConstraints>
+   <children>
+
+       <HBox alignment="CENTER" prefHeight="60.0" prefWidth="554.0" spacing="100.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+           <children>
+               <Button fx:id="createButton" maxWidth="275.0" minWidth="125.0" mnemonicParsing="false" onAction="#createBoard" prefWidth="200.0" style="-fx-background-color: ffa800;" styleClass="lulo" stylesheets="@stylesheet.css" text="Create a Board" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               <Button fx:id="joinButton" maxWidth="275.0" minWidth="200.0" mnemonicParsing="false" onAction="#joinBoard" prefWidth="155.0" style="-fx-background-color: ffa800;" styleClass="lulo" stylesheets="@stylesheet.css" text="Join Board" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+           </children>
+       </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="601.0" styleClass="lulo" stylesheets="@stylesheet.css" text="Create or Join a Board" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+       <Label layoutX="103.0" layoutY="165.0" stylesheets="@stylesheet.css" text="Server URL:" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+           <styleClass>
+               <String fx:value="lulo" />
+               <String fx:value="whiteFont" />
+           </styleClass>
+           <GridPane.margin>
+               <Insets top="5.0" />
+           </GridPane.margin>
+       </Label>
+       <TextField fx:id="server" layoutX="103.0" layoutY="260.0" maxWidth="500.0" prefHeight="25.0" prefWidth="500.0" promptText="localhost:8080" styleClass="lulo" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+           <GridPane.margin>
+               <Insets bottom="45.0" />
+           </GridPane.margin>
+       </TextField>
+       <Label fx:id="invalidServerMessage" prefHeight="17.0" prefWidth="273.0" text="Server unavailable" textFill="RED" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+           <GridPane.margin>
+               <Insets bottom="15.0" />
+           </GridPane.margin>
+       </Label>
+      <Button fx:id="adminButton" mnemonicParsing="false" onAction="#admin" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: ffa800;" styleClass="smallerButton" stylesheets="@stylesheet.css" text="Admin" />
+   </children>
+</GridPane>

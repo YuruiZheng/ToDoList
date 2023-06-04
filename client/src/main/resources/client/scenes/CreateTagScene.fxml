@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CreateTagSceneCtrl">
+   <children>
+      <Label fx:id="title" alignment="CENTER" layoutY="28.0" prefHeight="54.0" prefWidth="600.0" styleClass="title" text="Create Tag" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="titleTagName" layoutX="225.0" layoutY="107.0" styleClass="title" text="TAG NAME" textFill="WHITE" />
+      <Label fx:id="titleTagColor" layoutX="225.0" layoutY="175.0" styleClass="title" text="TAG COLOR" textFill="WHITE" />
+      <TextField fx:id="tagName" layoutX="225.0" layoutY="125.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="lulo" />
+      <Button fx:id="back" layoutX="140.0" layoutY="292.0" mnemonicParsing="false" onAction="#back" prefHeight="43.0" prefWidth="87.0" style="-fx-background-color: ffa800;" styleClass="lulo" text="BACK" />
+      <Button fx:id="create" layoutX="431.0" layoutY="292.0" mnemonicParsing="false" onAction="#create" prefHeight="43.0" prefWidth="87.0" style="-fx-background-color: ffa800;" styleClass="lulo" text="CREATE" />
+      <ColorPicker fx:id="tagColor" layoutX="223.0" layoutY="192.0" onAction="#changeColor" />
+      <Label fx:id="invalidTagNameMessage" layoutX="485.0" layoutY="131.0" text="INVALID TAG TITLE" textFill="RED" />
+   </children>
+</AnchorPane>

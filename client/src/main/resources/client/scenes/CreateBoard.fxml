@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" prefHeight="400.0" prefWidth="650.0" style="-fx-background-color: rgba(52, 52, 52, 1);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CreateBoardCtrl">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.60003662109375" minWidth="132.39996337890625" prefWidth="232.60001220703123" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.60003662109375" minWidth="10.0" prefWidth="366.9999877929687" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="146.79999389648438" minHeight="10.0" prefHeight="146.79999389648438" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="115.39999999999998" minHeight="10.0" prefHeight="115.39999999999998" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label stylesheets="@stylesheet.css" text="CREATE A BOARD" textFill="WHITE" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+         <styleClass>
+            <String fx:value="lulo" />
+            <String fx:value="whiteFont" />
+         </styleClass>
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label alignment="CENTER" stylesheets="@stylesheet.css" text="Name" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="lulo" />
+            <String fx:value="whiteFont" />
+         </styleClass></Label>
+      <Label stylesheets="@stylesheet.css" text="Password" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <styleClass>
+            <String fx:value="lulo" />
+            <String fx:value="whiteFont" />
+         </styleClass></Label>
+      <Label stylesheets="@stylesheet.css" text="Background" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <styleClass>
+            <String fx:value="lulo" />
+            <String fx:value="whiteFont" />
+         </styleClass></Label>
+      <TextField fx:id="boardName" maxWidth="250.0" styleClass="lulo" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="20.0" right="100.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="boardPassword" maxWidth="250.0" styleClass="lulo" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="20.0" right="100.0" />
+         </GridPane.margin>
+      </TextField>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <children>
+            <Button fx:id="createButton" alignment="CENTER" maxWidth="125.0" minWidth="125.0" mnemonicParsing="false" onAction="#submit" prefWidth="125.0" style="-fx-background-color: ffa800;" styleClass="lulo" stylesheets="@stylesheet.css" text="CREATE" textFill="WHITE" />
+            <Button fx:id="exitButton" alignment="CENTER" maxWidth="125.0" minWidth="125.0" mnemonicParsing="false" onAction="#exit" prefWidth="125.0" style="-fx-background-color: ffa800;" styleClass="lulo" stylesheets="@stylesheet.css" text="EXIT" textFill="WHITE" />
+         </children>
+      </HBox>
+      <ColorPicker fx:id="boardBg" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="20.0" right="100.0" />
+         </GridPane.margin>
+      </ColorPicker>
+      <Label fx:id="invalidBoardTitleMessage" text="INVALID BOARD NAME - CAN ONLY CONTAIN LETTERS AND NUMBERS" textFill="RED" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="invalidPasswordMessage" text="INVALID PASSWORD - CAN ONLY CONTAIN LETTERS AND NUMBERS" textFill="RED" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+   </children>
+</GridPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<GridPane id="customizationGrid" fx:id="mainGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="700.0" style="-fx-background-color: rgba(52,52, 52, 1);" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CustomizationCtrl">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.39996337890625" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="216.8" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="327.6" minWidth="10.0" prefWidth="233.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="325.6000061035156" minWidth="10.0" prefWidth="233.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="315.20000000000005" minWidth="10.0" prefWidth="233.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="302.79999999999995" minWidth="0.0" prefWidth="0.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.4000244140625" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="61.799997711181646" minHeight="1.199992346763608" prefHeight="1.199992346763608" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="84.79999389648438" minHeight="70.0" prefHeight="82.80000765323639" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="157.60000228881836" minHeight="35.0" prefHeight="39.599999999999994" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="174.2000274658203" minHeight="40.0" prefHeight="45.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="344.7999877929688" minHeight="40.0" prefHeight="45.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="344.7999877929688" minHeight="41.60001220703123" prefHeight="80.79999389648435" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="344.7999877929688" minHeight="100.0" prefHeight="260.00000610351566" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="318.60004272460935" minHeight="45.0" prefHeight="93.0000122070312" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="title" alignment="CENTER" prefHeight="72.0" prefWidth="577.0" styleClass="lulo" text="CUSTOMIZE YOUR BOARD" textFill="WHITE" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="titleColor" styleClass="title" text="BACKGROUND" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="43.0" prefWidth="87.0" styleClass="defaultButton" text="BACK" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+      <Button fx:id="set" mnemonicParsing="false" onAction="#set" prefHeight="43.0" prefWidth="87.0" styleClass="defaultButton" text="SET" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <ColorPicker fx:id="boardBGColour" onAction="#changeColor" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <value>
+            <Color red="0.20392157137393951" green="0.20392157137393951" blue="0.20392157137393951" />
+         </value>
+      </ColorPicker>
+      <Button fx:id="resetColour" mnemonicParsing="false" onAction="#resetColour" prefHeight="43.0" prefWidth="222.0" styleClass="defaultButton" text="RESET TO DEFAULT" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Label fx:id="titleColor1" styleClass="title" text="BOARD" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="titleColor2" styleClass="title" text="FONT" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <ColorPicker fx:id="boardFontColour" onAction="#changeColor" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Label fx:id="titleColor11" styleClass="title" text="LIST" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <ColorPicker fx:id="listFontColour" onAction="#changeColor" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <ColorPicker fx:id="listBGColour" onAction="#changeColor" GridPane.columnIndex="4" GridPane.rowIndex="4">
+         <value>
+            <Color red="0.20392157137393951" green="0.20392157137393951" blue="0.20392157137393951" />
+         </value>
+      </ColorPicker>
+      <Label fx:id="titleColor111" styleClass="title" text="CARD" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label styleClass="lulo" text="MY PRESETS" textFill="#efefef" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-insets: 0; -fx-padding: 0; -fx-border-width: 5; -fx-border-color: black;" vbarPolicy="ALWAYS" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </GridPane.margin>
+         <content>
+            <VBox fx:id="presetArea" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</GridPane>

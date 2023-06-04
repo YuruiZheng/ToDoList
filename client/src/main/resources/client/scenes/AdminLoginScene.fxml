@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AdminLoginCtrl">
+   <children>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="41.0" prefHeight="18.0" prefWidth="600.0" styleClass="title" text="Login" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordInput" layoutX="226.0" layoutY="162.0" style="-fx-border-color: black; -fx-border-width: 2px;" styleClass="lulo" />
+      <Label layoutX="226.0" layoutY="144.0" styleClass="title" text="Password" textFill="WHITE" />
+      <Button fx:id="submitButton" layoutX="275.0" layoutY="222.0" mnemonicParsing="false" onAction="#submit" styleClass="defaultButton" text="Login" />
+      <Label fx:id="wrongPassword" layoutX="226.0" layoutY="191.0" styleClass="title" text="Wrong password!" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="45.0" layoutY="55.0" mnemonicParsing="false" onAction="#back" styleClass="defaultButton" text="Back" />
+   </children>
+</AnchorPane>

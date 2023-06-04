@@ -1,0 +1,46 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+**/*.mv.db
+
+**/*.swp
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+client/src/main/java/client/websocket/WebSocketSessionHandler_BACKUP_608.java
+client/src/main/java/client/websocket/WebSocketSessionHandler_BASE_608.java
+client/src/main/java/client/websocket/WebSocketSessionHandler_LOCAL_608.java
+client/src/main/java/client/websocket/WebSocketSessionHandler_REMOTE_608.java

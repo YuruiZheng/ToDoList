@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<ScrollPane fx:id="scrollPane" fitToHeight="true" maxWidth="2"
+            style="-fx-background: rgba(52, 52, 52, 1); -fx-border-width: 1;-fx-border-color: rgba(52, 52, 52, 1) rgba(52, 52, 52, 1) rgba(52, 52, 52, 1) #ffa800;-fx-border-style: solid;"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="client.scenes.CollapsedBoardsCtrl">
+    <Button fx:id="showBoards" rotate="90.0" onMouseClicked="#showBoards" style="-fx-background-color: rgba(52, 52, 52, 1);" styleClass="lulo"
+            stylesheets="@stylesheet.css" text="Show boards" textAlignment="CENTER" textFill="WHITE" translateY="70.0">
+    </Button>
+</ScrollPane>
